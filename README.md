@@ -34,8 +34,6 @@ for any kind of training environments.
 For scripts of other datasets, they are very similar with existing ones; or I will update them later.
 
 
-### Dataset Path:
-
 Specify data path in Line 11 or Line 12 in `config/prostate_mri/base.py`:
 ```python
 self.DIR_ROOT = os.environ.get('TMPDIR')
