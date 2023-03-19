@@ -72,21 +72,21 @@ class BaseClient(object):
 
             self.curr_iter += 1
 
-        if self.config.WITH_ALIGN:
-            outputs = torch.tensor([], dtype=torch.float32, device=self.device)
-            labels = torch.tensor([], dtype=torch.float32, device=self.device)
-            with torch.no_grad():
-                for step, (image, label) in enumerate(self.train_loader):
-                    image, label = image.to(self.device), label.to(self.device)
-                    output = self.model.forward_feat(image)
-                    outputs = torch.cat([outputs, output.detach()], dim=0)
-                    labels = torch.cat([labels, label.detach()], dim=0)
-
-                centroids = torch.tensor([], dtype=torch.float32, device=self.device)
-                for i in range(self.config.NUM_CLASSES):
-                    f = outputs[labels == i]
-                    f = torch.mean(f, dim=1)
-                    centroids = torch.cat([centroids, f.detach()], dim=0)
+        # if self.config.WITH_ALIGN:
+        #     outputs = torch.tensor([], dtype=torch.float32, device=self.device)
+        #     labels = torch.tensor([], dtype=torch.float32, device=self.device)
+        #     with torch.no_grad():
+        #         for step, (image, label) in enumerate(self.train_loader):
+        #             image, label = image.to(self.device), label.to(self.device)
+        #             output = self.model.forward_feat(image)
+        #             outputs = torch.cat([outputs, output.detach()], dim=0)
+        #             labels = torch.cat([labels, label.detach()], dim=0)
+        #
+        #         centroids = torch.tensor([], dtype=torch.float32, device=self.device)
+        #         for i in range(self.config.NUM_CLASSES):
+        #             f = outputs[labels == i]
+        #             f = torch.mean(f, dim=1)
+        #             centroids = torch.cat([centroids, f.detach()], dim=0)
 
         acc = self.metric_fn(outputs, labels)
         loss = loss_all / len(self.train_loader)
