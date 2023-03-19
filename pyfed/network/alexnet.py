@@ -131,3 +131,26 @@ class AlexNetFedFa(AlexNet):
         x = self.classifier(f)
 
         return x
+
+    def forward_feat(self, x):
+        x = self.layer1(x)
+        x = self.pool1(x)
+        x = self.ffa_layer1(x)
+
+        x = self.layer2(x)
+        x = self.pool2(x)
+        x = self.ffa_layer2(x)
+
+        x = self.layer3(x)
+        x = self.ffa_layer3(x)
+
+        x = self.layer4(x)
+        x = self.ffa_layer4(x)
+
+        x = self.layer5(x)
+        x = self.pool5(x)
+        x = self.ffa_layer5(x)
+
+        x = self.avgpool(x)
+
+        return x

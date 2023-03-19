@@ -7,6 +7,7 @@ class Config(BaseConfig):
         self.CLIENT = 'BaseClient'
         self.COMM_TYPE = 'FedFA'
         self.NETWORK = 'alexnetfedfa'
+        self.WITH_ALIGN = True
 
         self.NETWORK_PARAMS = {
             'num_classes': 10,

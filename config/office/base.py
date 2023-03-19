@@ -22,10 +22,11 @@ class BaseConfig:
         self.INNER_SITES = ['amazon', 'caltech', 'dslr', 'webcam']
         self.OUTER_SITES = []
         self.IMAGE_SIZE = [3, 256, 256]
+        self.NUM_CLASSES = 10
 
         self.NETWORK = 'alexnet'
         self.NETWORK_PARAMS = {
-            'num_classes': 10
+            'num_classes': self.NUM_CLASSES
         }
 
         self.TRAIN_ROUNDS = 400
