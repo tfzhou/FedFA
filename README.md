@@ -84,10 +84,10 @@ bash euler_train_fedfa.sh
 If you find this work useful, please consider citing:
 
 ```
-@article{zhou2023fedfa,
-  title={FedFA: Federated Feature Augmentation},
-  author={Zhou, Tianfei and Konukoglu, Ender},
-  journal={arXiv preprint arXiv:2301.12995},
+@inproceedings{zhou2023fedfa,
+  title={Fed{FA}: Federated Feature Augmentation},
+  author={Tianfei Zhou and Ender Konukoglu},
+  booktitle={The Eleventh International Conference on Learning Representations (ICLR)},
   year={2023}
 }
 ```
