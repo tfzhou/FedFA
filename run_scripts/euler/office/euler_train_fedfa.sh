@@ -16,10 +16,9 @@ rsync -aP /cluster/work/cvl/tiazhou/data/medical/FL/office_caltech_10_dataset.zi
 unzip ${TMPDIR}/office_caltech_10_dataset.zip -d ${TMPDIR}/
 cd ../../../
 
-trial=0
+trial=2
 python main.py --config 'config.office.fedfa' \
                --server 'euler' \
-               --aug_method 'fedfa' \
                --trial $trial \
                --run_name 'fedfa_trial_'$trial \
                --run_notes 'trial '$trial': federated feature statistic augmentation, using fedavg for communication' \
