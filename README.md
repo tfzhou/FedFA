@@ -1,6 +1,6 @@
 # FedFA: Federated Feature Augmentation
 
-This is the PyTorch implementation of our [ICLR 2023](https://iclr.cc/) paper: [FedFA: Federated Feature Augmentation]()
+This is the PyTorch implementation of our [ICLR 2023](https://iclr.cc/) paper: [FedFA: Federated Feature Augmentation](https://openreview.net/pdf?id=U9yFP90jU0)
 by [Tianfei Zhou](https://www.tfzhou.com/) and [Ender Konukoglu](https://scholar.google.com/citations?user=OeEMrhQAAAAJ&hl=en), from ETH Zurich.
 
 ## ChangeLog
@@ -28,7 +28,7 @@ by [Tianfei Zhou](https://www.tfzhou.com/) and [Ender Konukoglu](https://scholar
 
 ## Training
 
-Bash training scripts for `prostate_mri` are provided in `run_scripts`. 
+Bash training scripts for `prostate_mri` and `office-caltech` are provided in `run_scripts`. 
 They are written for our cluster, but can be easily adapted
 for any kind of training environments. 
 For scripts of other datasets, they are very similar with existing ones; or I will update them later.
